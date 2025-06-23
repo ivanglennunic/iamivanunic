@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,191 +7,148 @@
   <title>Ivan Glenn Unic - Software Developer</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    :root {
-      --bg-color: #34495e;
-      --sidebar-color: #2c3e50;
-      --text-color: white;
-      --accent-color: #1abc9c;
-    }
-    body.light-mode {
-      --bg-color: #ecf0f1;
-      --sidebar-color: #bdc3c7;
-      --text-color: #2c3e50;
-    }
     body {
       margin: 0;
-      font-family: 'Century Gothic', Arial, sans-serif;
-      display: flex;
-      flex-direction: row;
-      height: 100vh;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      transition: background-color 0.3s, color 0.3s;
-    }
-    .sidebar {
-      background-color: var(--sidebar-color);
-      width: 30%;
-      padding: 40px 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+    .sidebar {
+      flex: 1 1 250px;
+      background-color: #34495e;
+      color: white;
+      padding: 20px;
     }
     .main-content {
-      width: 70%;
-      padding: 40px;
-      overflow-y: auto;
-    }
-    .profile-pic {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      background-color: #bdc3c7;
-      margin-bottom: 20px;
-    }
-    .social-icons a {
-      margin: 0 10px;
-      color: var(--text-color);
-      text-decoration: none;
-      font-size: 20px;
-    }
-    .download-btn {
-      background-color: var(--text-color);
-      color: var(--sidebar-color);
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 20px;
-      text-decoration: none;
-    }
-    footer {
-      font-size: 12px;
-      text-align: center;
-      margin-top: 40px;
+      flex: 3 1 600px;
+      padding: 20px;
     }
     h2 {
-      border-bottom: 2px solid var(--accent-color);
-      padding-bottom: 5px;
+      color: #2c3e50;
     }
-    section {
-      margin-bottom: 30px;
+    ul {
+      padding-left: 20px;
     }
-    .project {
-      background-color: rgba(255,255,255,0.05);
-      padding: 10px;
-      border-radius: 5px;
-      margin-bottom: 10px;
+    .contact-form {
+      margin-top: 40px;
     }
-    .toggle-mode {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: var(--text-color);
-      color: var(--sidebar-color);
-      border: none;
-      padding: 5px 10px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    form input, form textarea {
+    .contact-form input, .contact-form textarea {
       width: 100%;
       padding: 10px;
-      margin-top: 5px;
-      margin-bottom: 15px;
-      border: none;
-      border-radius: 5px;
+      margin: 5px 0 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
-    form button {
-      background-color: var(--accent-color);
+    .contact-form button {
+      background-color: #2c3e50;
       color: white;
-      border: none;
       padding: 10px 20px;
-      border-radius: 5px;
+      border: none;
+      border-radius: 4px;
       cursor: pointer;
     }
-    @media (max-width: 768px) {
-      body {
-        flex-direction: column;
-      }
-      .sidebar, .main-content {
-        width: 100%;
-      }
+    .social-icons a {
+      margin-right: 10px;
+      color: white;
+      font-size: 18px;
+    }
+    .dark-mode {
+      background-color: #1e1e1e;
+      color: #f4f4f4;
+    }
+    .dark-mode header, .dark-mode .sidebar {
+      background-color: #111;
+    }
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #fff;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 4px;
     }
   </style>
 </head>
 <body>
-  <button class="toggle-mode" onclick="toggleMode()">Toggle Mode</button>
-  <div class="sidebar">
-    <div>
-      <div class="profile-pic"></div>
-      <h1>Ivan Glenn Unic</h1>
-      <p>Software Developer</p>
-      <p><a href="mailto:ivanglennunic@gmail.com" style="color:inherit;"><i class="fas fa-envelope"></i> Email</a></p>
-      <p><a href="https://linkedin.com/in/ivanunic" style="color:inherit;"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
-      <p><a href="https://ivanunic.com" style="color:inherit;"><i class="fas fa-globe"></i> Website</a></p>
-      <a class="download-btn" href="Ivan Glenn Unic - Software Developer 2025.pdf" download>Download CV</a>
+  <button class="toggle-btn" onclick="toggleMode()">Toggle Dark/Light</button>
+  <header>
+    <h1>Ivan Glenn Unic</h1>
+    <p>Software Developer | Integration Solutions Specialist | Frontend Developer</p>
+  </header>
+  <div class="container">
+    <div class="sidebar">
+      <p><i class="fas fa-envelope"></i> ivan.unic@outlook.com</p>
+      <p><i class="fas fa-phone"></i> +971 55 714 8657</p>
+      <p><i class="fas fa-map-marker-alt"></i> Al Barsha 1, Dubai, UAE</p>
+      <div class="social-icons">
+        <a href="https://linkedin.com/in/ivanunic"><i class="fab fa-linkedin"></i></a>
+      </div>
     </div>
-    <footer>© 2025 Ivan Glenn Unic. All rights reserved.</footer>
-  </div>
-  <div class="main-content">
-    <section>
-      <h2>Hero</h2>
-      <p>Crafting elegant code and scalable solutions for the modern web.</p>
-    </section>
-    <section>
-      <h2>About Me</h2>
-      <p>Accomplished IT professional with over 10 years of experience in database solutions, application development, and IT systems...</p>
-    </section>
-    <section>
+    <div class="main-content">
+      <h2>Professional Summary</h2>
+      <p>Accomplished IT professional with over 10 years of experience in database solutions, application development, and ERP systems. Skilled in MS SQL Server Administration and Integration solutions. Proven track record in delivering ERP software systems for industries such as healthcare and logistics.</p>
+
       <h2>Skills</h2>
       <ul>
-        <li>Python, JavaScript, C#</li>
-        <li>React, Node.js, .NET</li>
-        <li>SQL, MongoDB</li>
-        <li>Cloud: AWS, Azure</li>
+        <li>Database & Query Development (MS SQL Server)</li>
+        <li>Web Development (ASP.NET MVC)</li>
+        <li>Data Integration (SSIS)</li>
+        <li>Cloud Infrastructure (Microsoft Azure)</li>
       </ul>
-    </section>
-    <section>
+
       <h2>Experience</h2>
-      <p>Senior Developer at XYZ Corp (2020–Present)</p>
-      <p>Software Engineer at ABC Ltd (2015–2020)</p>
-    </section>
-    <section>
-      <h2>Projects</h2>
-      <div class="project">
-        <strong>Project A</strong><br/>
-        A web app for managing tasks. Built with React and Firebase.
-      </div>
-      <div class="project">
-        <strong>Project B</strong><br/>
-        A REST API for e-commerce platform. Built with Node.js and MongoDB.
-      </div>
-    </section>
-    <section>
+      <h3>Software Developer | Integration Solutions Specialist | Frontend Developer</h3>
+      <p><strong>September 2019 – Present</strong> at Confidential Company, Dubai, UAE</p>
+      <p>Responsibilities include developing new applications and features using ASP.NET MVC framework.</p>
+
+      <h3>IT Officer | Web Developer</h3>
+      <p><strong>June 2016 – August 2018</strong> at Newrest SOS Ltd., Lagos Business School</p>
+      <p>Responsibilities included managing IT services and developing web applications.</p>
+
+      <h2>Key Contributions</h2>
+      <ul>
+        <li>Managed Instant Intranet migration to focus on online continuity.</li>
+      </ul>
+
       <h2>Education</h2>
-      <p>BSc in Computer Science, University of Example (2010–2014)</p>
-    </section>
-    <section>
+      <p>Bachelor of Science in Computer Science from University of San Jose-Recoletos</p>
+
       <h2>Certifications</h2>
-      <p>AWS Certified Developer, Microsoft Certified: Azure Developer Associate</p>
-    </section>
-    <section>
-      <h2>Contact Me</h2>
-      <form onsubmit="event.preventDefault(); alert('Message sent!');">
-        <label>Name</label>
-        <input type="text" required>
-        <label>Email</label>
-        <input type="email" required>
-        <label>Message</label>
-        <textarea rows="4" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </section>
+      <ul>
+        <li>Microsoft Certified Professional</li>
+      </ul>
+
+      <div class="contact-form">
+        <h2>Contact Me</h2>
+        <form>
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
   </div>
   <script>
     function toggleMode() {
-      document.body.classList.toggle('light-mode');
+      document.body.classList.toggle('dark-mode');
     }
   </script>
 </body>
