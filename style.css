@@ -19,8 +19,8 @@ body {
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight:bold;
   color: #b6bcc6;
 }
 
@@ -65,7 +65,7 @@ body {
 }
 
 .banner {
-  margin-top: 120px; /* space below navbar */
+  margin-top: 100px; /* space below navbar */
   text-align: center;
   padding: 40px 20px;
 }
@@ -120,7 +120,11 @@ body {
 
 /* Responsive behavior */
 @media (max-width: 768px) {
-  .talk-button {
-    display: none;
+  .banner-title {
+    text-align: left;
+  }
+  .banner{
+    margin-top: 50px;
+   
   }
 }
