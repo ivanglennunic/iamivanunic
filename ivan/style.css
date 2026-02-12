@@ -1,0 +1,290 @@
+body {
+  font-family: sans-serif;
+  background-color: #fff;
+}
+
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  padding: 10px 0;
+  background-color: transparent;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight:bold;
+  color: #b6bcc6;
+}
+
+.logo span {
+  color: #000;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.talk-button {
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+}
+
+.arrow {
+  font-size: 16px;
+}
+
+.menu-icon {
+  width: 24px;
+  height: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  height: 2px;
+  background-color: black;
+  border-radius: 1px;
+}
+
+.banner {
+  margin-top: 100px; /* space below navbar */
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.banner-title {
+  font-size: 2.5rem;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-weight: 600;
+  color: #111;
+}
+
+.banner-title .banner-subtitle {
+  color: #b6bcc6;
+}
+
+.banner-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn.primary {
+  background-color: black;
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: #333;
+}
+
+.btn.secondary {
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+}
+
+.btn.secondary:hover {
+  background-color: #f0f0f0;
+}
+
+.skills-section {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 40px 20px;
+}
+
+.skills-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.skill-category {
+  padding: 20px;
+  border-left: 3px solid #000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-category:hover {
+  transform: translateX(5px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.skill-items {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.experience-section {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 40px 20px;
+}
+
+.experience-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+.experience-item {
+  margin-bottom: 50px;
+}
+
+.experience-header {
+  margin-bottom: 20px;
+}
+
+.experience-job-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.experience-company {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.experience-dates {
+  font-size: 0.95rem;
+  color: #555;
+  font-style: italic;
+}
+
+.experience-intro {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.experience-category {
+  margin-bottom: 30px;
+}
+
+.experience-category-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.experience-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-list li {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.experience-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #000;
+  font-weight: bold;
+}
+
+.experience-list li strong {
+  color: #000;
+  font-weight: bold;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .banner-title {
+    text-align: left;
+  }
+  .banner{
+    margin-top: 50px;
+   
+  }
+  .skills-section {
+    margin: 60px auto;
+    padding: 30px 15px;
+  }
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .skills-title {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  .experience-section {
+    margin: 60px auto;
+    padding: 30px 15px;
+  }
+  .experience-title {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  .experience-job-title {
+    font-size: 1.1rem;
+  }
+  .experience-company {
+    font-size: 0.95rem;
+  }
+}
