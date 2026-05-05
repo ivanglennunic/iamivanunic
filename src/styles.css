@@ -158,7 +158,9 @@ a:hover {
   width: 26px;
   height: 26px;
   border-radius: 10px;
-  background: #f2f3f7;
+  display: block;
+  object-fit: cover;
+  background: transparent;
   border: 1px solid var(--ui-brand-border);
   box-shadow: 0 1px 0 var(--ui-brand-inset) inset;
 }
